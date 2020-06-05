@@ -1,7 +1,7 @@
 {
   "name": "@tandil/diffparse",
   "version": "0.1.0",
-  "description": "Simple parser Diff files (unified diff format)",
+  "description": "Simple parser for Diff files (unified diff format)",
   "main": "index.js",
   "scripts": {},
   "repository": {
