@@ -26,7 +26,7 @@ class TokenStream {
       NEW_FILE: /^\+\+\+ (.*)$/,
       NEW_MODE: /^new file mode \d{6}$/,
       INDEX: /^index [0-9a-f]+\.\.[0-9a-f]+( \d+)?$/,
-      CHUNK: /^@@ -\d+,\d+ \+\d+,\d+ @@/,
+      CHUNK: /^@@ -\d+(,\d+)?( \+\d+(,\d+)?)? @@/,
     });
   }
 
@@ -100,7 +100,7 @@ class UdiffParser {
     const eof = this.stream.next();
     this.expect(eof, 'EOF');
 
-    return {header, files}
+    return { header, files, errors: this.getErrors() }
   }
 
   rule_header() {
@@ -133,7 +133,7 @@ class UdiffParser {
     // mode line (optional)
     let mode = null;
     if (this.stream.get().type === 'NEW_MODE') {
-      mode = this.stream.next().content;
+      mode = this.stream.next();
     }
 
     // index line
@@ -201,6 +201,7 @@ class UdiffParser {
 const parseDiffString = input => {
   const tokenStream = new TokenStream(input);
   const parser = new UdiffParser(tokenStream);
+
   return parser.parse();
 };
 
