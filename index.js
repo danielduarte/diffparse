@@ -212,5 +212,10 @@ const parseDiffFile = filepath => new Promise((resolve, reject) => {
   });
 });
 
+const parseDiffFileSync = filepath => {
+  const data = fs.readFileSync(filepath, 'utf8');
+  return parseDiffString(data);
+};
 
-module.exports = { parseDiffFile, parseDiffString };
+
+module.exports = { parseDiffFile, parseDiffFileSync, parseDiffString };

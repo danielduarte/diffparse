@@ -14,6 +14,8 @@ Simple parser for Diff files (unified diff format)
 
 ### Parse from file
 
+#### Async with Promises
+
 Given a filepath it returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves to a JS object with the diff content parsed and easily accessible programmatically.
 
 ```js
@@ -22,6 +24,15 @@ const parser = require('@tandil/diffparse');
 parser.parseDiffFile('./examples/example1.diff').then(diff => {
   console.log(diff);
 });
+```
+
+#### Sync
+
+```js
+const parser = require('@tandil/diffparse');
+
+const diff = parser.parseDiffFileSync('./examples/example1.diff');
+console.log(diff);
 ```
 
 ### Parse from string
