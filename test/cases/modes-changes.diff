@@ -1,0 +1,12 @@
+diff --git a/es6.txt b/es6.txt
+old mode 100644
+new mode 100755
+index f1a9a31..5e9d655
+--- a/es6.txt
++++ b/es6.txt
+@@ -3,4 +3,5 @@ ECMAScript
+ 
+ It is a scripting-language specification standardized by Ecma International.
+ It was created to standardize JavaScript to help foster multiple independent implementations.
++new line in the middle
+ It was initially created for web browsers.

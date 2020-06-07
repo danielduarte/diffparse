@@ -1,0 +1,7 @@
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..2ccbe46
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++/node_modules/

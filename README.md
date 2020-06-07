@@ -1,6 +1,7 @@
 # @tandil/diffparse
-[![License](https://img.shields.io/npm/l/@tandil/diffparse?color=%23007ec6)](https://github.com/danielduarte/diffparse/blob/master/LICENSE)
 [![NPM Package Version](https://img.shields.io/npm/v/@tandil/diffparse)](https://www.npmjs.com/package/@tandil/diffparse)
+[![License](https://img.shields.io/npm/l/@tandil/diffparse?color=%23007ec6)](https://github.com/danielduarte/diffparse/blob/master/LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-blue.svg)](https://conventionalcommits.org)
 
 Simple parser for Diff files (unified diff format)
 
