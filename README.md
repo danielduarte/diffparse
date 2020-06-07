@@ -64,10 +64,12 @@ Outputs
   files: [
     {
       header: 'diff --git a/.gitignore b/.gitignore',
-      mode: 'new file mode 100644',
+      fileMode: 'new file mode 100644',
+      oldMode: null,
+      newMode: null,
       index: 'index 0000000..2ccbe46',
-      old: '--- /dev/null',
-      new: '+++ b/.gitignore',
+      oldFile: '--- /dev/null',
+      newFile: '+++ b/.gitignore',
       chunks: [
         {
           header: '@@ -0,0 +1 @@',
