@@ -1,11 +1,11 @@
 const parser = require('../index');
 const util = require('util');
+const fs = require('fs');
+
 
 function consolelog(...args) {
   console.log(util.inspect(...args, false, null, true));
 }
-
-const fs = require('fs');
 
 const files = fs.readdirSync('./test/cases');
 
